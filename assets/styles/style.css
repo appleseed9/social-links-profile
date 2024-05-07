@@ -1,0 +1,135 @@
+:root {
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: white;
+    --color-gray: hsl(0, 0%, 20%);
+    --color-dark-gray: hsl(0, 0%, 12%);
+    --color-black: hsl(0, 0%, 8%);
+
+    --color-box-quote: hsla(0,0%,100%,.75);
+
+    --box-width: 27.43rem; /* 384px */
+    --box-height: 43.57rem; /* 610px */
+
+    --btn-width: 21.71rem; /* 304px */
+    --btn-height: 3.21rem; /* 45px */
+    --btn-border-radius: .5rem;
+    --btn-font-weight-link: 600;
+
+    --image-width: 6.14rem; /* 86px */
+
+    --font-size-title: 1.57rem; /* 22px */
+    --font-size-subtitle: 1rem;
+    --font-size-quote: 1rem;
+    --font-size-btn: 1rem;
+
+
+}
+
+/*
+    Global css
+*/
+
+html {
+    font-size: 14px;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*
+    Box css 
+*/
+
+.box {
+    background: var(--color-dark-gray);
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: var(--box-height);
+    max-width: var(--box-width);
+    border-radius: 3%;
+}
+
+.box__image {
+    width: var(--image-width);
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2.3rem;
+    margin-bottom: 1.9rem;
+}
+
+.box__title {
+    color: var(--color-white);
+    font-size: var(--font-size-title);
+    font-weight: 600;
+    letter-spacing: .05rem;
+}
+
+.box__subtitle {
+    font-size: var(--font-size-subtitle);
+    color: var(--color-green);
+    padding: .75rem 0 1.1rem;
+}
+
+.box__quote {
+    font-size: var(--font-size-quote);
+    color: var(--color-box-quote);
+    display: inline-block;
+    padding: 1rem 0;
+}
+
+.box__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 1.1rem;
+    margin-top: .9rem;
+}
+
+/* 
+    Button css 
+*/
+
+.btn {
+    margin: auto;
+    background: var(--color-gray);
+    width: var(--btn-width);
+    height: var(--btn-height);
+    border-radius: var(--btn-border-radius);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn__link {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--btn-border-radius);
+    padding-top: 1rem;
+    color: var(--color-white);
+    font-size: var(--font-size-btn);
+    font-weight: var(--btn-font-weight-link);
+}
+
+.btn__link:hover {
+    background: var(--color-green);
+    color: var(--color-black);
+    font-size: var(--font-size-btn);
+    font-weight: 700;
+    text-shadow: .1px .1px .3px;
+}
+
+/*
+    Button link reset
+*/
+
+.btn__link:link, .btn__link:hover, .btn__link:active, .btn__link:visited {
+    text-decoration: none;
+}
